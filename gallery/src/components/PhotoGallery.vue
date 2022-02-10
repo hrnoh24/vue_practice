@@ -1,9 +1,12 @@
 <template>
   <div>
+    <h1>미라클 모닝 공모전</h1>
     <ul class="gallery">
       <li v-for="n in 5" :key="n">
         <img
           @click="highlight"
+          ref="imgs"
+          :id="n==1? 'theater':''"
           :src="require('@/assets/photos/' + n + '.jpeg')"
         >
       </li>
@@ -40,6 +43,9 @@ export default {
       
       this.theatrical = event.target.src;
     }
+  },
+  mounted() {
+    this.theatrical = this.$refs.imgs[0].src;
   }
 }
 </script>
@@ -60,8 +66,16 @@ li {
 img {
   width: 80%;
 }
+.gallery img:hover {
+  border: 2px solid orange;
+}
+
 #theater {
   width: 100%;
+}
+
+#theater:hover {
+  border: None;
 }
 
 #frame img {
