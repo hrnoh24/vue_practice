@@ -185,6 +185,17 @@ html {
     overflow: hidden!important;
     -webkit-border-radius: 50%;
     border-radius: 50%;
+    -webkit-transition: -webkit-box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .profile-social-links li a:hover {
+    -webkit-box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-social-links li a img {
+    border-radius: 10%;
   }
   
   .profile-social-links li a i {
